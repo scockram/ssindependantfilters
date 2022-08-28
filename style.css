@@ -38,7 +38,8 @@ body {
 
 /* Not very DRY. I don't care */
 #filter-list[data-compatible] li {
-  opacity: 0.4;
+  opacity: 0.3;
+  filter: blur(1.5px);
 }
 
 #filter-list[data-active="01"] li[data-design="01"],
@@ -50,9 +51,16 @@ body {
 #filter-list[data-active="07"] li[data-design="07"],
 #filter-list[data-active="08"] li[data-design="08"],
 #filter-list[data-active="09"] li[data-design="09"],
-#filter-list[data-active="10"] li[data-design="10"] { 
+#filter-list[data-active="10"] li[data-design="10"],
+#filter-list[data-active="11"] li[data-design="11"],
+#filter-list[data-active="12"] li[data-design="12"],
+#filter-list[data-active="13"] li[data-design="13"],
+#filter-list[data-active="14"] li[data-design="14"],
+#filter-list[data-active="15"] li[data-design="15"],
+#filter-list[data-active="16"] li[data-design="16"] {
   background: #c5c5dd;
   opacity: 1;
+  filter: none;
 }
 
 #filter-list[data-compatible*="01"] li[data-design="01"],
@@ -64,7 +72,14 @@ body {
 #filter-list[data-compatible*="07"] li[data-design="07"],
 #filter-list[data-compatible*="08"] li[data-design="08"],
 #filter-list[data-compatible*="09"] li[data-design="09"],
-#filter-list[data-compatible*="10"] li[data-design="10"] { 
+#filter-list[data-compatible*="10"] li[data-design="10"]
+#filter-list[data-compatible*="11"] li[data-design="11"],
+#filter-list[data-compatible*="12"] li[data-design="12"],
+#filter-list[data-compatible*="13"] li[data-design="13"],
+#filter-list[data-compatible*="14"] li[data-design="14"],
+#filter-list[data-compatible*="15"] li[data-design="15"],
+#filter-list[data-compatible*="16"] li[data-design="16"] {
   opacity: 1;
+  filter: none;
 }
 
