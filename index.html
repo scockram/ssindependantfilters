@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SSI-filter reference chart</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div id="container">
+    <p>
+      Signal-strength independent filters (SSI or sometimes, SS2) are not one-wide-tilable, and each
+      filter has to be tiled with compatible filters. This (incomplete, but useful) reference shows
+      compatible designs by selecting (clicking on) one of the designs, invalid designs are ghosted.
+    </p>
+    <ul id="filter-list">
+      <li data-design="01" data-compatible="05,07,08"><img src="images/design1.png" /></li>
+      <li data-design="02" data-compatible="08"><img src="images/design2.png" /></li>
+      <li data-design="03" data-compatible="08"><img src="images/design3.png" /></li>
+      <li data-design="04" data-compatible=""><img src="images/design4.png" /></li>
+      <li data-design="05" data-compatible="01"><img src="images/design5.png" /></li>
+      <li data-design="06" data-compatible="">item 6 missing (dup)</li>
+      <li data-design="07" data-compatible="01"><img src="images/design7.png" /></li>
+      <li data-design="08" data-compatible="01,02,03"><img src="images/design8.png" /></li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

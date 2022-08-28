@@ -1,0 +1,70 @@
+body {
+  font-family: sans-serif;
+  font-size: 24px;
+  line-height: 1.45em;
+  background: #fafafa;
+  color: #222;
+}
+
+#container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#filter-list {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  line-height: 24px;
+}
+
+#filter-list li {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+}
+
+#filter-list li img {
+  width: 220px;
+  height: 180px;
+  object-fit: cover;
+}
+
+#filter-list li:hover {
+  background: #dfdfea;
+}
+
+/* Not very DRY. I don't care */
+#filter-list[data-compatible] li {
+  opacity: 0.4;
+}
+
+#filter-list[data-active="01"] li[data-design="01"],
+#filter-list[data-active="02"] li[data-design="02"],
+#filter-list[data-active="03"] li[data-design="03"],
+#filter-list[data-active="04"] li[data-design="04"],
+#filter-list[data-active="05"] li[data-design="05"],
+#filter-list[data-active="06"] li[data-design="06"],
+#filter-list[data-active="07"] li[data-design="07"],
+#filter-list[data-active="08"] li[data-design="08"],
+#filter-list[data-active="09"] li[data-design="09"],
+#filter-list[data-active="10"] li[data-design="10"] { 
+  background: #c5c5dd;
+  opacity: 1;
+}
+
+#filter-list[data-compatible*="01"] li[data-design="01"],
+#filter-list[data-compatible*="02"] li[data-design="02"],
+#filter-list[data-compatible*="03"] li[data-design="03"],
+#filter-list[data-compatible*="04"] li[data-design="04"],
+#filter-list[data-compatible*="05"] li[data-design="05"],
+#filter-list[data-compatible*="06"] li[data-design="06"],
+#filter-list[data-compatible*="07"] li[data-design="07"],
+#filter-list[data-compatible*="08"] li[data-design="08"],
+#filter-list[data-compatible*="09"] li[data-design="09"],
+#filter-list[data-compatible*="10"] li[data-design="10"] { 
+  opacity: 1;
+}
+
