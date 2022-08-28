@@ -1,6 +1,6 @@
 # A chart of compatible filters
 
-blah blah blah
+View [on github pages](https://scockram.github.io/ssindependantfilters/).
 
 ## Taking isorenders
 
