@@ -28,8 +28,12 @@
 }
 
 #container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
+}
+
+a {
+  color: inherit;
 }
 
 p.aux {
@@ -50,10 +54,22 @@ p.aux {
   padding: 0;
   margin: 0;
   border: 1px solid var(--item-border-color);
+  position: relative;
+}
+
+#filter-list li::before {
+  content: attr(data-design);
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--item-border-color);
+  padding: 0 7px;
+  font-weight: bold;
 }
 
 #filter-list li img {
-  width: 220px;
+  width: 200px;
   height: 180px;
   object-fit: cover;
 }
@@ -68,44 +84,60 @@ p.aux {
   filter: blur(1.5px);
 }
 
-#filter-list[data-active="01"] li[data-design="01"],
-#filter-list[data-active="02"] li[data-design="02"],
-#filter-list[data-active="03"] li[data-design="03"],
-#filter-list[data-active="04"] li[data-design="04"],
-#filter-list[data-active="05"] li[data-design="05"],
-#filter-list[data-active="06"] li[data-design="06"],
-#filter-list[data-active="07"] li[data-design="07"],
-#filter-list[data-active="08"] li[data-design="08"],
-#filter-list[data-active="09"] li[data-design="09"],
-#filter-list[data-active="10"] li[data-design="10"],
-#filter-list[data-active="11"] li[data-design="11"],
-#filter-list[data-active="12"] li[data-design="12"],
-#filter-list[data-active="13"] li[data-design="13"],
-#filter-list[data-active="14"] li[data-design="14"],
-#filter-list[data-active="15"] li[data-design="15"],
-#filter-list[data-active="16"] li[data-design="16"] {
+#filter-list[data-active="A1"] li[data-design="A1"],
+#filter-list[data-active="B1"] li[data-design="B1"],
+#filter-list[data-active="C1"] li[data-design="C1"],
+#filter-list[data-active="D1"] li[data-design="D1"],
+#filter-list[data-active="E1"] li[data-design="E1"],
+#filter-list[data-active="F1"] li[data-design="F1"],
+#filter-list[data-active="A2"] li[data-design="A2"],
+#filter-list[data-active="B2"] li[data-design="B2"],
+#filter-list[data-active="C2"] li[data-design="C2"],
+#filter-list[data-active="D2"] li[data-design="D2"],
+#filter-list[data-active="E2"] li[data-design="E2"],
+#filter-list[data-active="F2"] li[data-design="F2"],
+#filter-list[data-active="A3"] li[data-design="A3"],
+#filter-list[data-active="B3"] li[data-design="B3"],
+#filter-list[data-active="C3"] li[data-design="C3"],
+#filter-list[data-active="D3"] li[data-design="D3"],
+#filter-list[data-active="E3"] li[data-design="E3"],
+#filter-list[data-active="F3"] li[data-design="F3"],
+#filter-list[data-active="A4"] li[data-design="A4"],
+#filter-list[data-active="B4"] li[data-design="B4"],
+#filter-list[data-active="C4"] li[data-design="C4"],
+#filter-list[data-active="D4"] li[data-design="D4"],
+#filter-list[data-active="E4"] li[data-design="E4"],
+#filter-list[data-active="F4"] li[data-design="F4"] {
   background: var(--item-active-color);
   opacity: 1;
   filter: none;
   border-color: var(--item-active-border-color);
 }
 
-#filter-list[data-compatible*="01"] li[data-design="01"],
-#filter-list[data-compatible*="02"] li[data-design="02"],
-#filter-list[data-compatible*="03"] li[data-design="03"],
-#filter-list[data-compatible*="04"] li[data-design="04"],
-#filter-list[data-compatible*="05"] li[data-design="05"],
-#filter-list[data-compatible*="06"] li[data-design="06"],
-#filter-list[data-compatible*="07"] li[data-design="07"],
-#filter-list[data-compatible*="08"] li[data-design="08"],
-#filter-list[data-compatible*="09"] li[data-design="09"],
-#filter-list[data-compatible*="10"] li[data-design="10"],
-#filter-list[data-compatible*="11"] li[data-design="11"],
-#filter-list[data-compatible*="12"] li[data-design="12"],
-#filter-list[data-compatible*="13"] li[data-design="13"],
-#filter-list[data-compatible*="14"] li[data-design="14"],
-#filter-list[data-compatible*="15"] li[data-design="15"],
-#filter-list[data-compatible*="16"] li[data-design="16"] {
+#filter-list[data-compatible*="A1"] li[data-design="A1"],
+#filter-list[data-compatible*="B1"] li[data-design="B1"],
+#filter-list[data-compatible*="C1"] li[data-design="C1"],
+#filter-list[data-compatible*="D1"] li[data-design="D1"],
+#filter-list[data-compatible*="E1"] li[data-design="E1"],
+#filter-list[data-compatible*="F1"] li[data-design="F1"],
+#filter-list[data-compatible*="A2"] li[data-design="A2"],
+#filter-list[data-compatible*="B2"] li[data-design="B2"],
+#filter-list[data-compatible*="C2"] li[data-design="C2"],
+#filter-list[data-compatible*="D2"] li[data-design="D2"],
+#filter-list[data-compatible*="E2"] li[data-design="E2"],
+#filter-list[data-compatible*="F2"] li[data-design="F2"],
+#filter-list[data-compatible*="A3"] li[data-design="A3"],
+#filter-list[data-compatible*="B3"] li[data-design="B3"],
+#filter-list[data-compatible*="C3"] li[data-design="C3"],
+#filter-list[data-compatible*="D3"] li[data-design="D3"],
+#filter-list[data-compatible*="E3"] li[data-design="E3"],
+#filter-list[data-compatible*="F3"] li[data-design="F3"],
+#filter-list[data-compatible*="A4"] li[data-design="A4"],
+#filter-list[data-compatible*="B4"] li[data-design="B4"],
+#filter-list[data-compatible*="C4"] li[data-design="C4"],
+#filter-list[data-compatible*="D4"] li[data-design="D4"],
+#filter-list[data-compatible*="E4"] li[data-design="E4"],
+#filter-list[data-compatible*="F4"] li[data-design="F4"] {
   opacity: 1;
   filter: none;
 }
