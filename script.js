@@ -4,8 +4,13 @@ window.onload = function() {
 
   for (const filter of filters) {
     filter.onclick = function() {
-      filterContainer.dataset.active = this.dataset.design;
-      filterContainer.dataset.compatible = this.dataset.compatible;
+      if (filterContainer.dataset.active == this.dataset.design) {
+        delete filterContainer.dataset.active;
+        delete filterContainer.dataset.compatible;
+      } else {
+        filterContainer.dataset.active = this.dataset.design;
+        filterContainer.dataset.compatible = this.dataset.compatible;
+      }
     }
   }
 }

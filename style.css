@@ -1,14 +1,40 @@
-body {
+/* Light scheme first, dark scheme second */
+:root {
+  --text-color: #444444;
+  --background-color: #fafafa;
+  --item-border-color: #cccccc;
+  --item-hover-color: #dfdfea;
+  --item-active-color: #c5c5dd;
+  --item-active-border-color: #a19eb2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #CCCCCC;
+    --background-color: #121232;
+    --item-border-color: #333363;
+    --item-hover-color: #333363;
+    --item-active-color: #434383;
+    --item-active-border-color: #434383;
+  }
+}
+
+:root {
   font-family: sans-serif;
   font-size: 24px;
   line-height: 1.45em;
-  background: #fafafa;
-  color: #222;
+  background: var(--background-color);
+  color: var(--text-color);
 }
 
 #container {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+p.aux {
+  font-size: 70%;
+  opacity: 80%;
 }
 
 #filter-list {
@@ -23,7 +49,7 @@ body {
   display: inline;
   padding: 0;
   margin: 0;
-  border: 1px solid #ccc;
+  border: 1px solid var(--item-border-color);
 }
 
 #filter-list li img {
@@ -33,7 +59,7 @@ body {
 }
 
 #filter-list li:hover {
-  background: #dfdfea;
+  background: var(--item-hover-color);
 }
 
 /* Not very DRY. I don't care */
@@ -58,9 +84,10 @@ body {
 #filter-list[data-active="14"] li[data-design="14"],
 #filter-list[data-active="15"] li[data-design="15"],
 #filter-list[data-active="16"] li[data-design="16"] {
-  background: #c5c5dd;
+  background: var(--item-active-color);
   opacity: 1;
   filter: none;
+  border-color: var(--item-active-border-color);
 }
 
 #filter-list[data-compatible*="01"] li[data-design="01"],
